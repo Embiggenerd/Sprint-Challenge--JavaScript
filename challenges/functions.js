@@ -28,7 +28,8 @@ console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice t
 
 // Explain in your own words why nestedfunction can access the variable internal.
 
-// Explanation: In javascript's, functions are passed a reference to their lexical scope, or their context. They can always look up the lexical tree, but not down, for a name that is not defined.
+// Explanation: In javascript's, functions are passed a reference to their lexical scope, or their context. They can 
+// always look up the lexical tree, but not down, for a name that is not defined.
 
 
 const external = "I'm outside the function";
