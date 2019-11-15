@@ -29,23 +29,39 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+    1) For each simply iterates through an array's elements and invokes a given callback on each element. There is no specific return type.
+    2) Map returns an array, typically of the same length as the original, after executing a callback function on each element.
 
 2. What is the difference between a function and a method?
+    1) A method is a function associated with a class/object/function. It is invoked this way: '<this>.<method>'. Under the hood, a method is a function with it's 'this' passed as a hidden, first argument.
+    2) A function is not associated with any given class, object, or function, and simply takes arguments and returns value. 
 
 3. What is closure?
+    In Javascript's scoping scheme, data can be passed down into a scope (block or function scope) by argument, or by closure. A scope is like a dictionary with a name:value pattern. If a name isn't found, javascript will go up into a function or block's context to look for that name until it finds it, or else return not defined. This is accomplished by passing a reference to the lexical scope to every function/block scope that is not available, to the user, but is available to the Javascript interpreter. 
 
 4. Describe the four rules of the 'this' keyword.
+    1) When in the global scope, the value of “this” will be the window/global Object, depending on whether the environemnt is a browser or node.
+
+    2) Whenever a function is called by a preceding dot, the object before that dot is this.
+
+    3) Whenever a constructor function is used, this refers to the specific instance of the object that is created and returned by the constructor function.
+
+    4) Whenever JavaScript’s call or apply method is used, this is explicitly defined. This can also be explicitely bound is 'bind'. To escape javascript's this binding, you can wrap a function in an arrow function as well.
+
+
+
 
 5. Why do we need super() in an extended class?
+    Super(parameters) refers exactly to the immediate parent of a class, or the first element in a __proto__ chain. It executes that class's constructor, passing the parameters specified to it. This will help to populate that parent class' data in case the child needs to access it.
 
 ## Project Set up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on Github.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
+- [x ] Create a forked copy of this project.
+- [x ] Add TL as collaborator on Github.
+- [x ] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x ] Create a new Branch on the clone: git checkout -b `<firstName-lastName>`.
 - [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
 - [ ] You are now ready to build this project with your preferred IDE
 - [ ] Implement the project on your Branch, committing changes regularly.
